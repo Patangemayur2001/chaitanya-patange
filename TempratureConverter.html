@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>  
+            html {  
+          height: 100vh;  
+          display: flex;   
+          align-items: center;  
+          justify-content: center;  
+          background-color: #1093b7;  
+          background-image: linear-gradient(315deg, #f03ace 0%, #d22c2c 74%);  
+          font-family: 'Cookie', cursive;  
+        }  
+           
+            </style>  
+        
+    </head>
+<title>Fahrenheit to Celcius Temperature Converter</title>
+<body>
+<div class-html>
+<h2> Simple Website for Temperature Converter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+</div>
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+</body>
+</html>
